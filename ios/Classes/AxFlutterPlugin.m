@@ -6,7 +6,7 @@
   FlutterMethodChannel* channel = [FlutterMethodChannel
       methodChannelWithName:@"ax_flutter_plugin"
             binaryMessenger:[registrar messenger]];
-  AxFlutterUtilPlugin* instance = [[AxFlutterUtilPlugin alloc] init];
+  AxFlutterPlugin* instance = [[AxFlutterPlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];
 
 }
