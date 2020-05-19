@@ -1,14 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/services.dart';
+
 export 'src/key_chain.dart';
 
 class AxFlutterPlugin {
-
   static const MethodChannel _channel =
       const MethodChannel('ax_flutter_plugin');
 
-  static MethodChannel get channel{
+  static MethodChannel get channel {
     return _channel;
   }
 
