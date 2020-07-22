@@ -1,39 +1,34 @@
 import 'dart:async';
+
 import 'package:ax_flutter_plugin/ax_flutter_plugin.dart';
+import 'package:flutter/foundation.dart';
 
 class KeyChain {
-  static Future<dynamic> get(
-    String key,
-  ) async {
-    dynamic result = await AxFlutterPlugin.channel.invokeMethod<dynamic>(
+  static Future<dynamic> get({@required String key}) {
+    return AxFlutterPlugin.channel.invokeMethod<dynamic>(
       'key_chain_get',
       <String, dynamic>{
         'key': key,
       },
     );
-    return result;
   }
 
-  static Future set(String key, dynamic value) async {
-    bool result = await AxFlutterPlugin.channel.invokeMethod<bool>(
+  static Future<bool> set({@required String key, @required dynamic value}) {
+    return AxFlutterPlugin.channel.invokeMethod<bool>(
       'key_chain_set',
       <String, dynamic>{
         'key': key,
         'value': value,
       },
     );
-    return result;
   }
 
-  static Future<dynamic> remove(
-    String key,
-  ) async {
-    dynamic result = await AxFlutterPlugin.channel.invokeMethod<dynamic>(
+  static Future<dynamic> remove({@required String key}) {
+    return AxFlutterPlugin.channel.invokeMethod<dynamic>(
       'key_chain_remove',
       <String, dynamic>{
         'key': key,
       },
     );
-    return result;
   }
 }
