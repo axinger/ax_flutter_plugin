@@ -1,11 +1,11 @@
 name: ax_flutter_plugin
 description: A new Flutter project.
 version: 0.0.1
-author:
+author: axinger
 homepage:
 
 environment:
-  sdk: ">= 2.12.0 <3.0.0"
+  sdk: ^3.5.2
 
 dependencies:
   flutter:
